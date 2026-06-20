@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buy Me a Crypto Coffee</title>
+  <meta name="description" content="Support my projects with crypto donations." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: #334155;
+      --button: #2563eb;
+      --button-hover: #1d4ed8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #0f172a, #111827);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 24px 0 10px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+    }
+
+    .hero p {
+      margin: 0 auto;
+      max-width: 700px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: rgba(30, 41, 59, 0.95);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .coin-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .coin-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: white;
+      padding: 4px;
+    }
+
+    .coin-title h2 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .coin-title span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .address-label {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .address {
+      background: #0b1220;
+      border: 1px solid #1f2937;
+      border-radius: 10px;
+      padding: 10px;
+      font-family: monospace;
+      font-size: 0.9rem;
+      overflow-x: auto;
+      margin-bottom: 14px;
+    }
+
+    .qr-wrap {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .qr-wrap img {
+      width: 180px;
+      max-width: 100%;
+      height: auto;
+      background: white;
+      padding: 8px;
+      border-radius: 12px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      appearance: none;
+      border: none;
+      background: var(--button);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      text-align: center;
+      flex: 1 1 120px;
+    }
+
+    button:hover {
+      background: var(--button-hover);
+    }
+
+    .separator {
+      width: 120px;
+      height: 1px;
+      background: var(--border);
+      margin: 28px auto 20px;
+    }
+
+    .github-box {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .github-link {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(30, 41, 59, 0.95);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .github-link:hover {
+      background: #243244;
+      transform: translateY(-1px);
+    }
+
+    .github-logo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .github-name {
+      font-size: 1.05rem;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 10px 0 10px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 14px; }
+
+      .hero h1 { font-size: 1.6rem; }
+
+      .card {
+        padding: 14px;
+        border-radius: 14px;
+      }
+
+      .qr-wrap img {
+        width: 160px;
+      }
+
+      button {
+        width: 100%;
+        flex: 1 1 100%;
+      }
+
+      .github-link {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>☕ Buy Me a Crypto Coffee</h1>
+      <p>
+        If you like my projects and you want to support more work, you can send a small crypto donation.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <div class="coin-header">
+          <img class="coin-icon" src="assets/bitcoin.png" alt="Bitcoin icon" />
+          <div class="coin-title">
+            <h2>Bitcoin</h2>
+            <span>BTC</span>
+          </div>
+        </div>
+
+        <div class="address-label">Wallet address</div>
+        <div class="address" id="btc-address">bc1qw2076vyumsf8qr7d034ulejqtu6m7kftr2npas</div><!-- BITCOIN-MARKER -->
+
+        <div class="qr-wrap">
+          <img alt="Bitcoin QR code" src="qrcodes/bitcoin-wallet.png"/>
+        </div>
+
+        <div class="actions">
+          <button onclick="copyAddress('btc-address', this)">Copy</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="coin-header">
+          <img class="coin-icon" src="assets/litecoin.png" alt="Litecoin icon" />
+          <div class="coin-title">
+            <h2>Litecoin</h2>
+            <span>LTC</span>
+          </div>
+        </div>
+
+        <div class="address-label">Wallet address</div>
+        <div class="address" id="ltc-address">ltc1q2trat7qp8s6lfk993zj4ax85w3mku847z28vja</div><!-- LITECOIN-MARKER -->
+
+        <div class="qr-wrap">
+          <img alt="Litecoin QR code" src="qrcodes/litecoin-wallet.png"/>
+        </div>
+
+        <div class="actions">
+          <button onclick="copyAddress('ltc-address', this)">Copy</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="coin-header">
+          <img class="coin-icon" src="assets/monero.png" alt="Monero icon" />
+          <div class="coin-title">
+            <h2>Monero</h2>
+            <span>XMR</span>
+          </div>
+        </div>
+
+        <div class="address-label">Wallet address</div>
+        <div class="address" id="xmr-address">86mV36EuLyo6c6iGEbV6m17W2czLHnTFd7J7snMFK9sfcwaZEave2oyPaHNVyPjBrH9hb3e7zmxiRACfNqbMP22n76TT3rB</div><!-- MONERO-MARKER -->
+
+        <div class="qr-wrap">
+          <img alt="Monero QR code" src="qrcodes/monero-wallet.png"/>
+        </div>
+
+        <div class="actions">
+          <button onclick="copyAddress('xmr-address', this)">Copy</button>
+        </div>
+      </article>
+    </section>
+
+    <div class="separator"></div>
+
+    <div class="github-box">
+      <a
+        class="github-link"
+        href="https://github.com/streanger"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img class="github-logo" src="assets/github.png" alt="GitHub logo" />
+        <div class="github-name">@streanger</div>
+      </a>
+    </div>
+
+    <footer>
+      Thanks for your support and motivation ❤️
+    </footer>
+  </main>
+
+  <script>
+    function copyAddress(id, button) {
+      const text = document.getElementById(id).textContent.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const oldText = button.textContent;
+        button.textContent = "Copied!";
+        setTimeout(() => button.textContent = oldText, 1500);
+      });
+    }
+  </script>
+</body>
+</html>
